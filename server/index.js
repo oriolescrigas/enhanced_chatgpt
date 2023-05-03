@@ -18,6 +18,14 @@ const port = 3080
 app.use(bodyParser.json())
 app.use(cors())
 
+app.get('/', (req, res) => {
+    console.log("Hello");
+
+    res.json({
+        data: "Puta Espanya",
+    })
+})
+
 app.post('/', async (req,res) => {
 
     const {message} = req.body;
